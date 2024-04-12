@@ -156,17 +156,17 @@ export default function Home() {
       </section>
       <section
         id="popularTrips"
-        className="flex w-full flex-col justify-center items-center mt-8 xl:pt-12 gap-8"
+        className="flex w-full flex-col justify-center items-center pt-12 xl:pt-12 "
       >
-        <h1 className="text-xl  xl:text-4xl font-bold font-montserrat text-[#D9B99B]">
+        <h1 className="text-2xl  xl:text-4xl font-bold font-montserrat text-[#D9B99B]">
           Explore Our Popular Trips
         </h1>
         {/* <div className="w-full " id="caroussel"></div> */}
         <Carousel
-          className="w-full flex flex-col justify-center  items-center"
-          orientation={isMobile ? "vertical" : "horizontal"}
+          className="w-full flex flex-col justify-center mt-8 items-center"
+          orientation={"horizontal"}
         >
-          <CarouselContent className="w-[100vw] h-[600px] flex justify-center items-center -translate-y-1/2 gap-4 px-12 ">
+          <CarouselContent className="w-[100vw] h-[500px] flex justify-center items-center -translate-y-1/2 gap-4 px-12 ">
             <CarouselItem
               className={`xl:basis-1/3 flex justify-center items-center`}
             >
@@ -186,17 +186,15 @@ export default function Home() {
             </CarouselItem>
           </CarouselContent>
           <CarouselPrevious
-            className={`w-8 h-8  ${
-              isMobile ? "top-0 self-center " : "left-0 ml-2"
-            }  bg-[#C16029] border-0 -translate-x-0 hover:bg-[#A14A23]`}
+            className={`w-8 h-8 left-0 ml-2 bg-[#C16029] border-0 -translate-x-0 hover:bg-[#A14A23]`}
           />
           <CarouselNext
-            className={`w-8 h-8   ${
-              isMobile ? "bottom-4 m-0" : "right-0 mr-2"
-            }  bg-[#C16029] border-0 -translate-x-0 hover:bg-[#A14A23] `}
+            className={`w-8 h-8  
+              right-0 mr-2
+             bg-[#C16029] border-0 -translate-x-0 hover:bg-[#A14A23] `}
           />
         </Carousel>
-        <div className="flex    ">
+        <div className="flex ">
           <button className="bg-[#B2AC88] px-4 py-2 rounded-full">
             <h1 className="xl:text-lg text-xs font-bold font-montserrat text-white">
               VIEW ALL

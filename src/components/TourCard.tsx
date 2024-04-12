@@ -126,7 +126,7 @@ export const TourCard: React.FC = () => {
               Integer sit amet metus eget lorem dignissim vulputate.
             </p>
           </div>
-          <div className="w-full flex justify-center -translate-y-8">
+          <div className="w-full flex justify-center items-end ">
             <button className="bg-[#B2AC88] px-4 py-2 rounded-full ">
               <h1 className="xl:text-lg text-xs font-bold font-montserrat text-white">
                 View tour
