@@ -131,8 +131,8 @@ export default function Home() {
             <div>
               <p className="text-center max-w-[500px] text-xs text-[#D9B99B] font-montserrat font-medium">
                 Unlock the secrets of Morocco with our expert guides. From
-                vibrant souks to Sahara adventures, we'll craft your perfect
-                journey, Free Pre-booking
+                vibrant souks to Sahara adventures, we&apos;ll craft your
+                perfect journey, Free Pre-booking
               </p>
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function Home() {
               Top Destinations
             </h1>
             <p className="text-center text-xs text-[#D9B99B] font-montserrat font-medium">
-              Discover Morocco's top destinations with us.
+              Discover Morocco&apos;s top destinations with us.
             </p>
           </div>
           <div className="flex w-full flex-col items-center justify-center ">
@@ -219,11 +219,11 @@ export default function Home() {
             <CarouselItem className="w-full flex flex-col justify-center mt-12 items-center gap-4">
               <div className="w-16 h-16 bg-white rounded-full"></div>
               <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
-                "Absolutely amazing experience with this travel agency! From the
+                Absolutely amazing experience with this travel agency! From the
                 vibrant markets of Marrakech to the breathtaking dunes of the
                 Sahara, every moment was unforgettable. Their attention to
                 detail and personalized service made our trip to Morocco truly
-                magical. Can't wait to book with them again!"
+                magical. Can&apos;t wait to book with them again!
               </p>
               <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
                 By
@@ -232,17 +232,17 @@ export default function Home() {
                 </span>
               </p>
               <p className="text-center font-bold  text-xs max-w-[700px] text-[#D9B99B]">
-                "TRAVELLER"
+                TRAVELLER
               </p>
             </CarouselItem>
             <CarouselItem className="w-full flex flex-col justify-center mt-12 items-center gap-4">
               <div className="w-16 h-16 bg-white rounded-full"></div>
               <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
-                "Absolutely amazing experience with this travel agency! From the
+                Absolutely amazing experience with this travel agency! From the
                 vibrant markets of Marrakech to the breathtaking dunes of the
                 Sahara, every moment was unforgettable. Their attention to
                 detail and personalized service made our trip to Morocco truly
-                magical. Can't wait to book with them again!"
+                magical. Can&apos;t wait to book with them again!
               </p>
               <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
                 By
@@ -257,11 +257,11 @@ export default function Home() {
             <CarouselItem className="w-full flex flex-col justify-center mt-12 items-center gap-4">
               <div className="w-16 h-16 bg-white rounded-full"></div>
               <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
-                "Absolutely amazing experience with this travel agency! From the
+                Absolutely amazing experience with this travel agency! From the
                 vibrant markets of Marrakech to the breathtaking dunes of the
                 Sahara, every moment was unforgettable. Their attention to
                 detail and personalized service made our trip to Morocco truly
-                magical. Can't wait to book with them again!"
+                magical. Can&apos;t wait to book with them again!
               </p>
               <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
                 By
@@ -270,7 +270,7 @@ export default function Home() {
                 </span>
               </p>
               <p className="text-center font-bold  text-xs max-w-[700px] text-[#D9B99B]">
-                "TRAVELLER"
+                TRAVELLER
               </p>
             </CarouselItem>
             {/* <CarouselItem className="w-full flex flex-col justify-center mt-12 items-center gap-4">
@@ -329,7 +329,7 @@ export default function Home() {
           Create Your Custom Moroccan Adventure Today !
         </h1>
         <h1 className="text-center text-xl  xl:text-4xl font-bold font-montserrat mt-4 text-[#D9B99B]">
-          Let's Craft Your Dream Journey Together
+          Let&apos;s Craft Your Dream Journey Together
         </h1>
         <div className="max-w-[700px]" id="form">
           <form

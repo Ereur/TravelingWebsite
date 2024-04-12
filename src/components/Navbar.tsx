@@ -53,7 +53,7 @@ const Navbar = () => {
       <nav className="hidden  sticky top-0 z-50 xl:flex flex-col justify-center items-center ">
         <div className=" w-full flex justify-center items-center z-50 bg-[#D9B99B]">
           <p className="font-bold text-md font-montserrat text-black ">
-            "Unlock the Magic of Morocco: Secure Your Adventure with Free
+            Unlock the Magic of Morocco: Secure Your Adventure with Free
             Pre-Booking! 🌟
           </p>
           <button className="flex p-2 justify-center h-[90%] rounded-xl ml-4 bg-[#D9B99B] hover:bg-[#8F896B] ">
