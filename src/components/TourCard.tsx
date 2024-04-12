@@ -3,6 +3,9 @@ import Transport from "@/assets/icons/Transport";
 import Guid from "@/assets/icons/Guid";
 import Food from "@/assets/icons/Food";
 import Location from "@/assets/icons/Location";
+import Autoplay from "embla-carousel-autoplay";
+import React from "react";
+
 import {
   Carousel,
   CarouselContent,
@@ -12,13 +15,22 @@ import {
 } from "@/components/ui/carousel";
 
 export const TourCard: React.FC = () => {
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
+
   return (
     <div
       className="flex flex-col w-full h-[500px] max-w-[350px]   max-h-[500px] rounded-[40px] overflow-hidden "
       id="card"
     >
       {/* <div id="TourCaroussel" className="h-1/2 bg-white"> */}
-      <Carousel className="w-full ">
+      <Carousel
+        className="w-full "
+        plugins={[plugin.current]}
+        onMouseEnter={plugin.current.stop}
+        onMouseLeave={plugin.current.reset}
+      >
         <CarouselContent>
           <CarouselItem>
             <img
@@ -126,7 +138,7 @@ export const TourCard: React.FC = () => {
               Integer sit amet metus eget lorem dignissim vulputate.
             </p>
           </div>
-          <div className="w-full flex justify-center items-end ">
+          <div className="absolute h-full w-full top-0 flex justify-center items-end">
             <button className="bg-[#B2AC88] px-4 py-2 rounded-full ">
               <h1 className="xl:text-lg text-xs font-bold font-montserrat text-white">
                 View tour

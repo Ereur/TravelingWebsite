@@ -20,11 +20,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Home() {
   // const segment = useSelectedLayoutSegment();
   const [isMobile, setIsMobile] = useState(false);
-
+  const plugin = React.useRef(
+    Autoplay({ delay: 2000, stopOnInteraction: true })
+  );
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -118,7 +121,7 @@ export default function Home() {
               Travel Guide
             </h1>
             <div>
-              <p className="text-center text-xs text-[#D9B99B] font-montserrat font-medium ">
+              <p className="text-center text-xs text-white font-montserrat font-medium ">
                 unforgettable experiences. Discover Morocco with hassle-free
                 reservations.
               </p>
@@ -129,7 +132,7 @@ export default function Home() {
               Easy Booking
             </h1>
             <div>
-              <p className="text-center max-w-[500px] text-xs text-[#D9B99B] font-montserrat font-medium">
+              <p className="text-center max-w-[500px] text-xs text-white font-montserrat font-medium">
                 Unlock the secrets of Morocco with our expert guides. From
                 vibrant souks to Sahara adventures, we&apos;ll craft your
                 perfect journey, Free Pre-booking
@@ -140,7 +143,7 @@ export default function Home() {
             <h1 className="text-lg  text-[#D9B99B] font-montserrat font-black ">
               Top Destinations
             </h1>
-            <p className="text-center text-xs text-[#D9B99B] font-montserrat font-medium">
+            <p className="text-center text-xs text-white font-montserrat font-medium">
               Discover Morocco&apos;s top destinations with us.
             </p>
           </div>
@@ -148,7 +151,7 @@ export default function Home() {
             <h1 className="text-lg  text-[#D9B99B] font-montserrat font-black ">
               24/7 support
             </h1>
-            <p className="text-center text-xs text-[#D9B99B] font-montserrat font-medium">
+            <p className="text-center text-xs text-white font-montserrat font-medium">
               Round-the-clock support, 24/7, because your peace of mind matters.
             </p>
           </div>
@@ -212,103 +215,139 @@ export default function Home() {
         {/* <div className="w-full flex flex-col justify-center mt-12 items-center gap-4">
           
         </div> */}
-        <Carousel className="w-full  flex justify-center  items-center gap-4">
-          <CarouselContent className="w-full  gap-4 cursor-pointer flex justify-center items-center">
-            <CarouselItem className="w-full flex flex-col justify-center mt-12 items-center gap-4">
+        <Carousel
+          className="w-full  flex justify-center  items-center gap-4 "
+          plugins={[plugin.current]}
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+        >
+          <CarouselContent className="w-full  gap-4 cursor-pointer flex -ml-0 justify-center items-center">
+            <CarouselItem className="w-full flex flex-col justify-center pl-0 xl:mt-12 mt-4 items-center gap-4">
               <div className="w-16 h-16 bg-white rounded-full"></div>
-              <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
+              <p className="text-center font-medium  text-xs max-w-[700px] text-white">
                 Absolutely amazing experience with this travel agency! From the
                 vibrant markets of Marrakech to the breathtaking dunes of the
                 Sahara, every moment was unforgettable. Their attention to
                 detail and personalized service made our trip to Morocco truly
                 magical. Can&apos;t wait to book with them again!
               </p>
-              <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
-                By
-                <span className="ml-2 text-center font-bold  text-xs max-w-[700px] text-white">
-                  Esther Howard
-                </span>
-              </p>
-              <p className="text-center font-bold  text-xs max-w-[700px] text-[#D9B99B]">
-                TRAVELLER
-              </p>
+              <div>
+                <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
+                  By
+                  <span className="ml-2 text-center font-bold  text-xs max-w-[700px] text-white">
+                    Esther Howard
+                  </span>
+                </p>
+                <p className="text-center font-bold  text-xs max-w-[700px] text-[#D9B99B]">
+                  TRAVELLER
+                </p>
+              </div>
             </CarouselItem>
-            <CarouselItem className="w-full flex flex-col justify-center mt-12 items-center gap-4">
+            <CarouselItem className="w-full flex flex-col justify-center pl-0 xl:mt-12 mt-4 items-center gap-4">
               <div className="w-16 h-16 bg-white rounded-full"></div>
-              <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
+              <p className="text-center font-medium  text-xs max-w-[700px] text-white">
                 Absolutely amazing experience with this travel agency! From the
                 vibrant markets of Marrakech to the breathtaking dunes of the
                 Sahara, every moment was unforgettable. Their attention to
                 detail and personalized service made our trip to Morocco truly
                 magical. Can&apos;t wait to book with them again!
               </p>
-              <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
-                By
-                <span className="ml-2 text-center font-bold  text-xs max-w-[700px] text-white">
-                  Esther Howard
-                </span>
-              </p>
-              {/* <p className="text-center font-bold  text-xs max-w-[700px] text-[#D9B99B]">
-                "TRAVELLER"
-              </p> */}
+              <div>
+                <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
+                  By
+                  <span className="ml-2 text-center font-bold  text-xs max-w-[700px] text-white">
+                    Esther Howard
+                  </span>
+                </p>
+                <p className="text-center font-bold  text-xs max-w-[700px] text-[#D9B99B]">
+                  TRAVELLER
+                </p>
+              </div>
             </CarouselItem>
-            <CarouselItem className="w-full flex flex-col justify-center mt-12 items-center gap-4">
+            <CarouselItem className="w-full flex flex-col justify-center pl-0 xl:mt-12 mt-4 items-center gap-4">
               <div className="w-16 h-16 bg-white rounded-full"></div>
-              <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
+              <p className="text-center font-medium  text-xs max-w-[700px] text-white">
                 Absolutely amazing experience with this travel agency! From the
                 vibrant markets of Marrakech to the breathtaking dunes of the
                 Sahara, every moment was unforgettable. Their attention to
                 detail and personalized service made our trip to Morocco truly
                 magical. Can&apos;t wait to book with them again!
               </p>
-              <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
-                By
-                <span className="ml-2 text-center font-bold  text-xs max-w-[700px] text-white">
-                  Esther Howard
-                </span>
-              </p>
-              <p className="text-center font-bold  text-xs max-w-[700px] text-[#D9B99B]">
-                TRAVELLER
-              </p>
+              <div>
+                <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
+                  By
+                  <span className="ml-2 text-center font-bold  text-xs max-w-[700px] text-white">
+                    Esther Howard
+                  </span>
+                </p>
+                <p className="text-center font-bold  text-xs max-w-[700px] text-[#D9B99B]">
+                  TRAVELLER
+                </p>
+              </div>
             </CarouselItem>
-            {/* <CarouselItem className="w-full flex flex-col justify-center mt-12 items-center gap-4">
+            <CarouselItem className="w-full flex flex-col justify-center pl-0 xl:mt-12 mt-4 items-center gap-4">
               <div className="w-16 h-16 bg-white rounded-full"></div>
-              <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
-                "Absolutely amazing experience with this travel agency! From the
+              <p className="text-center font-medium  text-xs max-w-[700px] text-white">
+                Absolutely amazing experience with this travel agency! From the
                 vibrant markets of Marrakech to the breathtaking dunes of the
                 Sahara, every moment was unforgettable. Their attention to
                 detail and personalized service made our trip to Morocco truly
-                magical. Can't wait to book with them again!"
+                magical. Can&apos;t wait to book with them again!
               </p>
-              <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
-                By
-                <span className="text-center font-bold  text-xs max-w-[700px] text-[#D9B99B]">
-                  Esther Howard
-                </span>
-              </p>
-              <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
-                "TRAVELLER"
-              </p>
+              <div>
+                <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
+                  By
+                  <span className="ml-2 text-center font-bold  text-xs max-w-[700px] text-white">
+                    Esther Howard
+                  </span>
+                </p>
+                <p className="text-center font-bold  text-xs max-w-[700px] text-[#D9B99B]">
+                  TRAVELLER
+                </p>
+              </div>
             </CarouselItem>
-            <CarouselItem className="w-full flex flex-col justify-center mt-12 items-center gap-4">
+            <CarouselItem className="w-full flex flex-col justify-center pl-0 xl:mt-12 mt-4 items-center gap-4">
               <div className="w-16 h-16 bg-white rounded-full"></div>
-              <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
-                "Absolutely amazing experience with this travel agency! From the
+              <p className="text-center font-medium  text-xs max-w-[700px] text-white">
+                Absolutely amazing experience with this travel agency! From the
                 vibrant markets of Marrakech to the breathtaking dunes of the
                 Sahara, every moment was unforgettable. Their attention to
                 detail and personalized service made our trip to Morocco truly
-                magical. Can't wait to book with them again!"
+                magical. Can&apos;t wait to book with them again!
               </p>
-              <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
-                By
-                <span className="text-center font-bold  text-xs max-w-[700px] text-white">
-                  Esther Howard
-                </span>
+              <div>
+                <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
+                  By
+                  <span className="ml-2 text-center font-bold  text-xs max-w-[700px] text-white">
+                    Esther Howard
+                  </span>
+                </p>
+                <p className="text-center font-bold  text-xs max-w-[700px] text-[#D9B99B]">
+                  TRAVELLER
+                </p>
+              </div>
+            </CarouselItem>
+            <CarouselItem className="w-full flex flex-col justify-center pl-0 xl:mt-12 mt-4 items-center gap-4">
+              <div className="w-16 h-16 bg-white rounded-full"></div>
+              <p className="text-center font-medium  text-xs max-w-[700px] text-white">
+                Absolutely amazing experience with this travel agency! From the
+                vibrant markets of Marrakech to the breathtaking dunes of the
+                Sahara, every moment was unforgettable. Their attention to
+                detail and personalized service made our trip to Morocco truly
+                magical. Can&apos;t wait to book with them again!
               </p>
-              <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
-                "TRAVELLER"
-              </p>
-            </CarouselItem> */}
+              <div>
+                <p className="text-center font-medium  text-xs max-w-[700px] text-[#D9B99B]">
+                  By
+                  <span className="ml-2 text-center font-bold  text-xs max-w-[700px] text-white">
+                    Esther Howard
+                  </span>
+                </p>
+                <p className="text-center font-bold  text-xs max-w-[700px] text-[#D9B99B]">
+                  TRAVELLER
+                </p>
+              </div>
+            </CarouselItem>
           </CarouselContent>
         </Carousel>
         <div className="flex w-full justify-center mt-4 ">
@@ -372,7 +411,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="FAQ" className="w-full flex justify-center xl:pt-28 pt-16">
+      <section
+        id="FAQ"
+        className="w-full flex justify-center flex-col items-center  xl:gap-16 gap-8 xl:pt-28 pt-16"
+      >
+        <h1 className="text-center text-xl  xl:text-4xl font-bold font-montserrat text-[#D9B99B]">
+          Dive into our FAQ section for quick insights and clarity.
+        </h1>
         <div className="max-w-[600px] w-full flex gap-4 flex-col">
           {[...Array(5)].map((_, index) => (
             <Accordion
