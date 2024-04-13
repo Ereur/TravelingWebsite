@@ -26,13 +26,9 @@ const Navbar = () => {
         setActiveHash(window.location.hash);
       }
     };
-
     if (typeof window !== "undefined") {
-      // setActiveHash(window.location.hash);
-
       window.addEventListener("hashchange", handleHashChange);
     }
-
     return () => {
       if (typeof window !== "undefined") {
         window.removeEventListener("hashchange", handleHashChange);
