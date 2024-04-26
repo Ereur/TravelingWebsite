@@ -75,7 +75,7 @@ export default function Home() {
             </h1>
           </div>
           <div className="flex justify-start xl:ml-20 xl:mt-8 mt-4">
-            <button className="bg-[#B2AC88] px-4 py-2 rounded-full">
+            <button className="bg-[#B2AC88] px-4 py-2 rounded-full hover:bg-[#8F896B]">
               <h1 className="xl:text-lg text-xs font-bold font-montserrat text-white">
                 Start Tours
               </h1>
@@ -198,7 +198,7 @@ export default function Home() {
           />
         </Carousel>
         <div className="flex ">
-          <button className="bg-[#B2AC88] px-4 py-2 rounded-full">
+          <button className="bg-[#B2AC88] px-4 py-2 rounded-full hover:bg-[#8F896B]">
             <h1 className="xl:text-lg text-xs font-bold font-montserrat text-white">
               VIEW ALL
             </h1>
@@ -351,7 +351,7 @@ export default function Home() {
           </CarouselContent>
         </Carousel>
         <div className="flex w-full justify-center mt-4 ">
-          <button className="bg-[#B2AC88] px-4 py-2 rounded-full">
+          <button className="bg-[#B2AC88] px-4 py-2 rounded-full hover:bg-[#8F896B]">
             <h1 className="xl:text-lg text-xs font-bold font-montserrat text-white">
               BOOK A CALL
             </h1>
@@ -403,7 +403,7 @@ export default function Home() {
             {/* <Input type="textearea" placeholder="Email" /> */}
           </form>
           <div className="flex mt-8 w-full justify-center items-center   ">
-            <button className="bg-[#B2AC88] px-4 py-2 rounded-full">
+            <button className="bg-[#B2AC88] px-4 py-2 rounded-full hover:bg-[#8F896B]">
               <h1 className="xl:text-lg text-xs font-bold font-montserrat text-white">
                 SUBMIT
               </h1>
@@ -445,9 +445,8 @@ export default function Home() {
       </section>
       <section
         id="Footer"
-        className="absolute bottom-100 w-full xl:h-[65vh] h-[20vh] mt-16 overflow-hidden "
+        className="absolute top-100 w-full xl:h-[450px] h-[250px] mt-16 overflow-hidden "
       >
-        {/* <img src="" alt="" /> */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           // width="1440"

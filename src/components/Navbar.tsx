@@ -9,7 +9,7 @@ const Navbar = () => {
   const [navItems, setNavItems] = useState([
     { label: "HOME", href: "/", hash: "#home" },
     { label: "TOUR", href: "/tours", hash: "#tours" },
-    { label: "TopTrips", href: "/#popularTrips", hash: "#popularTrips" },
+    { label: "TOP TRIPS", href: "/#popularTrips", hash: "#popularTrips" },
     { label: "CUSTOM TOURS", href: "/#customtours", hash: "#customtours" },
     { label: "TESTIMONIAL", href: "/#Testmonials", hash: "#Testmonials" },
     { label: "FAQ", href: "/#FAQ", hash: "#FAQ" },
