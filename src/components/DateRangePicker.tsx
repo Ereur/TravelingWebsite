@@ -20,7 +20,8 @@ import {
 
 export function DateRangePicker({
   className,
-}: React.HTMLAttributes<HTMLDivElement>) {
+  ButtonClassName,
+}: React.HTMLAttributes<HTMLDivElement> & {ButtonClassName?:string} )  {
   const [date, setDate] = React.useState<DateRange | undefined>({
     from: new Date(2022, 0, 20),
     to: addDays(new Date(2022, 0, 20), 20),
@@ -34,7 +35,7 @@ export function DateRangePicker({
             id="date"
             variant={"outline"}
             className={cn(
-              "w-full justify-start text-left font-normal bg-[#5B340A] border-[#5B340A] hover:bg-[#916A2D] ",
+              ButtonClassName,
               !date && "text-muted-foreground"
             )}
           >
