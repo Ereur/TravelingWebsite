@@ -37,7 +37,7 @@ export default function tours() {
           </h1>
         </div>
       </div>
-      <div className="sticky top-[20px] flex z-20 justify-center items-center">
+      <div className="sticky xl:top-[20px] top-0 flex z-20 justify-center items-center">
         <div className="mt-20 grid grid-cols-3 bg-background w-[750px] z-20 h-[65px]  rounded-3xl  border-4 border-[#B2AC88] overflow-hidden">
           <PersonesMenu />
           <DateRangePicker
@@ -53,23 +53,23 @@ export default function tours() {
         </div>
       </div>
       <div className="h-[20px]"></div>
-      <div className="flex justify-between items-center px-9 flex-wrap">
-        <div className="w-1/3">
+      <div className="relative z-10 flex xl:justify-between justify-center items-center xl:px-9 xl:flex-wrap flex-col xl:flex-row">
+        <div className="xl:w-1/3 w-full flex justify-center">
           <TourCard />
         </div>
-        <div className="w-1/3">
+        <div className="xl:w-1/3 w-full flex justify-center">
           <TourCard />
         </div>
-        <div className="w-1/3">
+        <div className="xl:w-1/3 w-full flex justify-center">
           <TourCard />
         </div>
-        <div className="w-1/3">
+        <div className="xl:w-1/3 w-full flex justify-center">
           <TourCard />
         </div>
-        <div className="w-1/3">
+        <div className="xl:w-1/3 w-full flex justify-center">
           <TourCard />
         </div>
-        <div className="w-1/3">
+        <div className="xl:w-1/3 w-full flex justify-center">
           <TourCard />
         </div>
       </div>
