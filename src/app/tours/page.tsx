@@ -44,11 +44,6 @@ export default function tours() {
             className=" w-full"
             ButtonClassName="w-full justify-start h-full border-0 text-left font-normal   hover:bg-[#916A2D] "
           />
-          {/* <DateRangePicker
-            className=" w-full"
-            ButtonClassName="w-full justify-start h-full  text-left font-normal  border-0  hover:bg-[#916A2D] "
-          /> */}
-          {/* <DateRangePicker className=" w-full" ButtonClassName="w-full justify-start h-full  text-left font-normal  border-[#5B340A] hover:bg-[#916A2D] " /> */}
           <DropdownMenuCheckboxes />
         </div>
       </div>
