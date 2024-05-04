@@ -61,9 +61,9 @@ export default function Home() {
         <div className="w-full absolute top-0 h-[61vh] z-10 opacity-55 bg-gradient-to-t from-[#784101] to-transparent"></div>
         <div className="w-full absolute top-0 h-[61vh] z-10 bg-gradient-to-t from-[#784101] to-transparent"></div>
       </div>
-      <div className="  pt-32 xl:mt-36  w-full relative   z-10   ">
+      <div className="  pt-32 xl:mt-36  w-full relative     z-20 ">
         <div className="flex flex-col h-full w-full justify-start items-center xl:items-start ">
-          <div className="flex xl:ml-20 flex-col xl:gap-4" id="quote">
+          <div className="flex xl:ml-20 flex-col xl:gap-4 " id="quote">
             <p className="text-[#D9B99B] xl:text-xs text-[8px] tracking-wide font-montserrat font-bold">
               We Beleive In Travelling Experience
             </p>

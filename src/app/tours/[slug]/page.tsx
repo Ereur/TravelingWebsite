@@ -9,6 +9,7 @@ export default function ToursPage() {
   const router = useRouter();
   // console.log(router.query.slug);
   router.push("/tours/1/thetrip");
+
   console.log(router);
   return null;
   // <Tabs

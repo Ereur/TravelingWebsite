@@ -1,3 +1,4 @@
+"use client";
 import LogmentSolid from "@/assets/icons/LogmentSolid";
 import Transport from "@/assets/icons/Transport";
 import Guid from "@/assets/icons/Guid";
@@ -5,6 +6,7 @@ import Food from "@/assets/icons/Food";
 import Location from "@/assets/icons/Location";
 import Autoplay from "embla-carousel-autoplay";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 import {
   Carousel,
@@ -13,8 +15,11 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { routeModule } from "next/dist/build/templates/app-page";
 
 export const TourCard: React.FC = () => {
+  const route = useRouter();
+
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true })
   );
@@ -139,7 +144,10 @@ export const TourCard: React.FC = () => {
             </p>
           </div>
           <div className="absolute h-full w-full top-0 flex justify-center items-end">
-            <button className="bg-[#B2AC88] px-4 py-2 rounded-full ">
+            <button
+              className="bg-[#B2AC88] px-4 py-2 rounded-full "
+              onClick={() => route.push("/tours/1")}
+            >
               <h1 className="xl:text-lg text-xs font-bold font-montserrat text-white">
                 View tour
               </h1>
