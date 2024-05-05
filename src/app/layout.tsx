@@ -20,6 +20,7 @@ import React from "react";
 
 import { useSelectedLayoutSegment } from "next/navigation";
 import login from "./dashboard/page";
+import { useRouter } from "next/navigation";
 
 export default function RootLayout({
   children,
@@ -33,12 +34,13 @@ export default function RootLayout({
   customtours: React.ReactNode;
 }>) {
   const segment = useSelectedLayoutSegment();
+  const route = useRouter();
 
   console.log("segment", segment);
   return (
     <html lang="en">
       <body className={`scroll-smooth	debug-screens bg-background`}>
-        {segment != "login" && (
+        {segment != "login" && segment != "dashboard" && segment != "trip" && (
           <>
             <Navbar />
             <main className="xl:mt-[-120px] bg-background">{children}</main>
@@ -121,7 +123,59 @@ export default function RootLayout({
             </section>
           </>
         )}
-        {children}
+        {(segment == "dashboard" || segment == "trip") && (
+          <>
+            <div className="w-screen flex items-center justify-center">
+              <nav className="w-[80%] bg-white flex justify-between items-center py-2 px-2 rounded-xl mt-4">
+                <div
+                  id="profile"
+                  className="flex items-center justify-center gap-2"
+                >
+                  <img
+                    src="https://via.placeholder.com/36"
+                    alt="profile"
+                    className="rounded-full"
+                  />
+                  <p className=" font-bold text-md text-mainFont">
+                    Anas Amoussaoui
+                  </p>
+                </div>
+                {segment == "dashboard" && (
+                  <div id="search">
+                    <input
+                      type="text"
+                      placeholder="Search..."
+                      className="w-[200px] h-8 rounded-md px-2"
+                    />
+                  </div>
+                )}
+
+                <div id="buttons" className="flex gap-4">
+                  {segment == "dashboard" && (
+                    <button
+                      onClick={() => {
+                        route.push("/trip");
+                      }}
+                    >
+                      ADD TRIP
+                    </button>
+                  )}
+                  {segment == "trip" && (
+                    <button
+                      onClick={() => {
+                        route.push("/dashboard");
+                      }}
+                    >
+                      SAVE TRIP
+                    </button>
+                  )}
+                  <button>Log Out</button>
+                </div>
+              </nav>
+            </div>
+            {children}
+          </>
+        )}
       </body>
     </html>
   );

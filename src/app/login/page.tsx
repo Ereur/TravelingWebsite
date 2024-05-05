@@ -6,10 +6,12 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import React from "react";
 import { signIn, signOut, useSession } from "next-auth/react";
-
+import { useRouter } from "next/navigation";
 export default function SignIn() {
   console.log("Sign In");
   // console.log({ Nextauth });
+  const router = useRouter();
+  const [error, setError] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   return (
@@ -33,16 +35,25 @@ export default function SignIn() {
               placeholder="Email"
               onChange={(e) => {
                 setEmail(e.target.value);
+                setError("");
               }}
             />
+
             <Input
               className="w-[70%] rounded-xl "
               type="password"
               placeholder="Password"
               onChange={(e) => {
                 setPassword(e.target.value);
+                setError("");
               }}
             />
+            {
+              error && (
+                <p className="text-md font-bold text-[#D99B9B]">{error}</p>
+              )
+              // <p className="text-red-500">{error}</p>
+            }
           </div>
           <div className="w-[70%] flex items-center  justify-between">
             <div className="flex items-center space-x-2">
@@ -60,12 +71,16 @@ export default function SignIn() {
             className="mt-4 w-[70%] h-12 bg-[#B2AC88] hover:opacity-80 text-white font-bold rounded-xl"
             onClick={async () => {
               await signIn("credentials", {
-                // redirect: false,
+                redirect: false,
                 email,
                 password,
               })
                 .then((res) => {
-                  console.log({ res });
+                  if (res?.error) {
+                    setError(res.error);
+                  } else {
+                    router.push("/dashboard");
+                  }
                 })
                 .catch((err) => {
                   console.log({ err });

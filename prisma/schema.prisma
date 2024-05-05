@@ -28,3 +28,42 @@ model User {
 
     @@map(name: "users")
 }
+
+// Define the Trip model
+model Trip {
+    id                 Int                 @id @default(autoincrement())
+    title              String
+    description        String
+    createdAt          DateTime            @default(now())
+    days               Int
+    Acomodation        String
+    meals              String
+    groupSize          Int
+    // Define the relationship with the AvailabilityRange model
+    availabilityRanges AvailabilityRange[]
+    TripDay            TripDay[]
+}
+
+// Define the AvailabilityRange model
+model AvailabilityRange {
+    id        Int      @id @default(autoincrement())
+    startDate DateTime
+    endDate   DateTime
+    price     Float
+    reduction Float
+    trip      Trip     @relation(fields: [tripId], references: [id])
+    tripId    Int // Foreign key to Trip
+}
+
+// Define the TripDay model
+model TripDay {
+    id            Int      @id @default(autoincrement())
+    dayNumber     Int // Day number within the trip
+    title         String
+    city          String
+    description   String
+    accommodation String
+    mealsIncluded String[]
+    trip          Trip     @relation(fields: [tripId], references: [id])
+    tripId        Int // Foreign key to Trip
+}

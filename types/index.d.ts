@@ -9,3 +9,5 @@ declare module 'tailwindcss-debug-screens' {
         }
     }
 }
+
+declare module 'jsonwebtoken';
