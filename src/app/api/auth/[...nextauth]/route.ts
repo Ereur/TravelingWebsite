@@ -42,7 +42,6 @@ const handler =  NextAuth({
  
         // logic to verify if user exists
         user = await getUserFromDb(credentials?.email as string)
-        console.log("user",{ user })
 
         if (!user) {
           // No user found, so this is their first attempt to login

@@ -176,6 +176,7 @@ export default function RootLayout({
             {children}
           </>
         )}
+        {segment == "login" && children}
       </body>
     </html>
   );
