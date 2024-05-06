@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useSelectedLayoutSegment } from "next/navigation";
 
 export default function login() {
-  const route = useRouter();
+  // const route = useRouter();
   // const segment = useSelectedLayoutSegment();
   // console.log("segment", segment);
   // const { data: session, status } = useSession();
